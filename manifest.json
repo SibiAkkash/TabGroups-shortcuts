@@ -1,38 +1,53 @@
 {
-  "name": "Tabgroups-shortcuts",
-  "version": "1.0",
-  "manifest_version": 3,
-  "action": {
-    "default_popup": "hello.html",
-    "default-icon": {
-      "16": "/images/get_started16.png",
-      "32": "/images/get_started32.png",
-      "48": "/images/get_started48.png",
-      "128": "/images/get_started128.png"
-    }
-  },
-  "permissions": [
-    "activeTab",
-    "tabs",
-    "tabGroups"
-  ],
-  "commands": {
-    "create_new_group_with_current_tab": {
-      "suggested_key": {
-        "default": "Ctrl+Y",
-        "mac": "MacCtrl+Y"
-      },
-      "description": "test command"
-    },
-    "add_to_group": {
-      "suggested_key": {
-        "default": "Ctrl+B",
-        "mac": "MacCtrl+B"
-      },
-      "description": "adds active tab to existing group"
-    }
-  },
-  "background": {
-    "service_worker": "background.js"
-  }
+	"name": "Tabgroups-shortcuts",
+	"version": "1.0",
+	"manifest_version": 3,
+	"action": {
+		"default_popup": "hello.html",
+		"default-icon": {
+			"16": "/images/get_started16.png",
+			"32": "/images/get_started32.png",
+			"48": "/images/get_started48.png",
+			"128": "/images/get_started128.png"
+		}
+	},
+	"permissions": [
+		"activeTab",
+		"tabs",
+		"tabGroups",
+		"windows"
+	],
+	"commands": {
+		"create_new_group_with_current_tab": {
+			"suggested_key": {
+				"default": "Ctrl+Shift+Y",
+				"mac": "MacCtrl+Y"
+			},
+			"description": "test command"
+		},
+		"add_to_group": {
+			"suggested_key": {
+				"default": "Ctrl+B",
+				"mac": "MacCtrl+B"
+			},
+			"description": "adds active tab to existing group"
+		},
+		"move_tab_to_right": {
+			"suggested_key": {
+				"default": "Ctrl+Shift+PageDown",
+				"mac": "MacCtrl+Shift+PageDown"
+			},
+			"description": "move current tab to the right"
+		},
+		"move_tab_to_left": {
+			"suggested_key": {
+				"default": "Ctrl+Shift+PageUp",
+				"mac": "MacCtrl+Shift+PageUp"
+			},
+			"description": "move current tab to the left"
+		}
+	},
+	"background": {
+		"service_worker": "background.js"
+	}
 }
